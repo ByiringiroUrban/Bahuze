@@ -11,10 +11,13 @@ body {
 header {
   background-color: #FF7F50;
   color: white;
-  padding: 15px 20px;
+  padding: 1px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.logo{
+  display: flex;
 }
 
 .logo h1 {
@@ -33,6 +36,9 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+nav a:hover{
+  text-decoration: underline;
+}
 
 /* Search Section */
 .search-section {
@@ -40,6 +46,10 @@ nav a {
   padding: 20px;
   display: flex;
   justify-content: center;
+}
+.search-section img{
+  width: 80px;
+  margin-right: 8rem;
 }
 
 .search-container {
@@ -71,7 +81,7 @@ nav a {
 }
 .menu-icon{
   width: 60px;
-  /* margin-left: 8rem; */
+  margin-left: 8rem;
 }
 
 /* Featured Properties Section */
@@ -142,3 +152,83 @@ nav a {
   font-size: 0.9rem;
   color: #666666;
 }
+
+
+/* Blue Section Styles */
+.blue-section {
+  background-color: #003366; /* Deep Blue */
+  color: #FFFFFF; /* White text for contrast */
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.info-box {
+  background-color: #005588; /* Slightly lighter blue for cards */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.info-box h3 {
+  color: #FFA500; /* Orange for headings */
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 5px
+}
+
+/* Partners Section */
+.partners {
+    background-color: var(--accent-color);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.partners h2 {
+    margin-bottom: 20px;
+}
+
+.partners img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
