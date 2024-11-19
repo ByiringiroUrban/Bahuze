@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+
+
+// Function to open the side menu
+function openMenu() {
+    document.getElementById("sideMenu").style.width = "250px"; // Adjust width as needed
+    document.getElementById("menu").style.display = "none"
+}
+
+// Function to close the side menu
+function closeMenu() {
+    document.getElementById("sideMenu").style.width = "0";
+}
+

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bahuze - Real Estate Properties</title>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,16 +17,16 @@
         <nav>
             <ul>
                 <li><a href="#">Request Property</a></li>
-                <li><a href="#">Offer Property</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="#">| Offer Property</a></li>
+                <li><a href="#">| 🔑Login</a></li>
+                <li><a href="#">| 🔐Register</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Search Section -->
     <section class="search-section">
-        <img src="logo.png" alt="logo">
+        <a href="index.html"><img src="logo.png" alt="logo"></a>
         <div class="search-container">
             <input type="text" placeholder="Enter neighborhood..." class="search-input">
             <select class="dropdown">
@@ -41,15 +41,34 @@
                 <option>Commercial</option>
                 <option>Shared house</option>
             </select>
-            <select class="dropdown">
+            <select class="dropdown" id="dropdown2">
                 <option>Sale</option>
                 <option>Rent</option>
+            </select>
+            <select class="dropdown">
+                <option>Rwf</option>
+                <option>USD</option>
+                <option>Euro</option>
             </select>
             <input type="number" placeholder="Min: 0" class="price-input">
             <input type="number" placeholder="Max: 500000" class="price-input">
             <button class="search-button">Search</button>
-            <img  class="menu-icon" src="menu.png" alt="menu button">
+            <img  class="menu-icon" id="menu" onclick="openMenu()" src="menu.png" alt="menu button">
         </div>
+
+        <!-- Side Menu Structure (Unchanged) -->
+        <div id="sideMenu" class="side-menu">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Customer Services</a>
+            <a href="#terms">Services Terms</a>
+            <a href="#partnership">Partnership with Other Agents</a>
+            <a href="#testimony">Customer Testimony</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        
     </section>
 
     <!-- Featured Properties Section -->
@@ -65,7 +84,7 @@
             <div class="property-card">
                 <img src="1.png" alt="Property Image">
                 <div class="property-info">
-                    <h3>Rwf 70,000,000 / Entire Place</h3>
+                    <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
                     <p>Land at Kagugu, Kigali</p>
                     <span>Residential - 753 Sqm</span>
                 </div>
@@ -73,7 +92,7 @@
             <div class="property-card">
                 <img src="image.png" alt="Property Image">
                 <div class="property-info">
-                    <h3>Rwf 80,000,000 / Entire Place</h3>
+                    <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
                     <p>Land at Kagugu, Kigali</p>
                     <span>Residential - 1031 Sqm</span>
                 </div>
@@ -81,15 +100,15 @@
             <div class="property-card">
               <img src="image.png" alt="Property Image">
               <div class="property-info">
-                  <h3>Rwf 80,000,000 / Entire Place</h3>
-                  <p>Land at Kagugu, Kigali</p>
+                <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
+                <p>Land at Kagugu, Kigali</p>
                   <span>Residential - 1031 Sqm</span>
               </div>
           </div>
           <div class="property-card">
             <img src="image.png" alt="Property Image">
             <div class="property-info">
-                <h3>Rwf 80,000,000 / Entire Place</h3>
+                <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
                 <p>Land at Kagugu, Kigali</p>
                 <span>Residential - 1031 Sqm</span>
             </div>
@@ -97,15 +116,15 @@
         <div class="property-card">
           <img src="image.png" alt="Property Image">
           <div class="property-info">
-              <h3>Rwf 80,000,000 / Entire Place</h3>
-              <p>Land at Kagugu, Kigali</p>
+            <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
+            <p>Land at Kagugu, Kigali</p>
               <span>Residential - 1031 Sqm</span>
           </div>
       </div>
       <div class="property-card">
         <img src="image.png" alt="Property Image">
         <div class="property-info">
-            <h3>Rwf 80,000,000 / Entire Place</h3>
+            <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
             <p>Land at Kagugu, Kigali</p>
             <span>Residential - 1031 Sqm</span>
         </div>
@@ -113,22 +132,33 @@
     <div class="property-card">
       <img src="image.png" alt="Property Image">
       <div class="property-info">
-          <h3>Rwf 80,000,000 / Entire Place</h3>
-          <p>Land at Kagugu, Kigali</p>
+        <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
+        <p>Land at Kagugu, Kigali</p>
           <span>Residential - 1031 Sqm</span>
       </div>
   </div>
 <div class="property-card">
         <img src="image.png" alt="Property Image">
     <div class="property-info">
-        <h3>Rwf 80,000,000 / Entire Place</h3>
+        <a href=""><h3>Rwf 70,000,000 / Entire Place</h3></a>
         <p>Land at Kagugu, Kigali</p>
         <span>Residential - 1031 Sqm</span>
     </div>
 </div>
         </div>
     </section>
-
+    <div class="number-div">
+        <a href=""><h3>1  </h3></a>
+        <a href=""><h3>2  </h3></a>
+        <a href=""><h3>3 </h3></a>
+        <a href=""><h3>4  </h3></a>
+        <a href=""><h3>5  </h3></a>
+        <a href=""><h3>6  </h3></a>
+        <a href=""><h3>7  </h3></a>
+        <a href=""><h3>8  </h3></a>
+        <a href=""><h3>9  </h3></a>
+        <a href=""><h3>10  </h3></a>
+    </div>
     <!-- Blue Background Section -->
 <section class="blue-section">
     <div class="content-wrapper">
@@ -174,6 +204,74 @@
     <h2>Our Partners</h2>
     <img src="partner.png" alt="Partner Logo">
 </section>
+
+<!-- HTML for the Footer -->
+<footer style="background-color: #222; color: #FFF; padding: 30px 0;">
+    <div class="footer-container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <!-- Navigation Links -->
+        <div class="footer-links" style="margin-bottom: 20px;">
+            <a href="#home">HOME</a> |
+            <a href="#about">ABOUT US</a> |
+            <a href="#customer-services">CUSTOMER SERVICES</a> |
+            <a href="#services-terms">SERVICES TERMS</a> |
+            <a href="#partnership">PARTNERSHIP WITH OTHER AGENTS</a> |
+            <a href="#testimony">CUSTOMER TESTIMONY</a> |
+            <a href="#contact">CONTACT US</a> |
+            <a href="#sitemap">SITEMAP</a>
+        </div>
+
+        <!-- Separator Line -->
+        <hr style="border-color: #444; width: 80%; margin: 10px auto;">
+
+        <!-- Copyright and Developer Information -->
+        <div class="footer-info" style="margin-bottom: 20px;">
+            <p>&copy; 2024 BAHUZE. All Rights Reserved.</p>
+            <p>Developed with <span style="color: #FF7F50;">&#9829;</span> <a href="" style="text-decoration: none; color: #FF7F50;">by Urban Pac</a></p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact" style="margin-bottom: 20px;">
+            <p>&#x1F4CD; Kigali city center - Kacyiru<br>
+               Near the Kigali Public Library, Office No 9<br>
+               <a href="">&#x260E; +250 788 854 243<br></a>
+               <a href="">&#x2709; info@bahuze.com</p></a>
+        </div>
+
+        <!-- Social Media Icons -->
+       <!-- Social Media Icons using FontAwesome -->
+
+<div class="footer-social" style="margin-bottom: 20px;">
+    <p>Follow us:</p>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/your-page-name" class="social-icon fb" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- Twitter -->
+    <a href="https://twitter.com/your-username" class="social-icon tw" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/your-username" class="social-icon ig" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/your-company-name" class="social-icon li" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+</div>
+
+    </div>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="#" class="scroll-top">&#x25B2;</a>
+        <a href="https://wa.me/250788854243" target="_blank" class="whatsapp-icon">&#x1F4AC;</a>
+    </div>
+</footer>
+
 
     <script src="script.js"></script>
 </body>
