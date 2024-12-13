@@ -1,0 +1,658 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  color: #333333;
+}
+
+/* Header */
+header {
+  background-color: #FF7F50;
+  color: white;
+  padding: 1px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo{
+  display: flex;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-right: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+
+/* Hover and Active State */
+.side-menu a:hover {
+  background-color: #FF7F50; /* Orange on hover */
+  color: white;
+}
+
+
+/* Search Section */
+.search-section {
+  background-color: #FF4500;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 52px;
+  width: 100%;
+}
+.search-section img{
+  width: 80px;
+  margin-left: 2rem;
+
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 4px; /* Space between elements */
+  align-items: center;
+  width: 100%;
+  margin-left: 3rem;
+}
+
+
+.search-input, .dropdown, .price-input {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 11.5%;
+}
+
+
+.search-button {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  background-color:rgb(247, 244, 244);
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+.menu-icon{
+  width: 60px;
+  margin-left: 10rem;
+}
+
+/* Side Menu with Orange Background */
+.side-menu {
+  height: 100%;          /* Full height */
+  width: 0;              /* Initial width is 0 (hidden) */
+  position: fixed;       /* Fixed position */
+  top: 0;
+  right: 0;               /* Adjusted to start from the left side */
+  background-color: #FF7F50; /* Orange background color */
+  overflow-x: hidden;    /* Disable horizontal scrolling */
+  transition: 0.5s;      /* Smooth transition */
+  padding-top: 60px;     /* Padding at the top */
+  z-index: 1001;         /* Above other content */
+}
+
+/* Menu Links with white text */
+.side-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;          /* White text color */
+  display: block;
+  transition: 0.3s;
+}
+
+/* Highlight the active menu item */
+.side-menu a:hover {
+  background-color: rgb(62, 62, 180) /* Slightly darker shade of orange */
+}
+
+/* Close Button adjusted for left-side alignment */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  left: 0; /* Adjusted to be on the left side */
+  cursor: pointer;
+  color: white;
+}
+
+/* end of header css............................................................................................................ */
+
+/* Container */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+/* Map Section */
+.map-container {
+  flex: 1;
+  min-width: 50%;
+}
+
+/* Form Section */
+.form-container {
+  flex: 1;
+  min-width: 50%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-container p {
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FFA500;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: #FFA500;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e69500;
+}
+
+/* Form Styles */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FFA500;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color:rgb(35, 35, 230);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+      padding: 15px;
+  }
+
+  .testimonial-header h1 {
+      font-size: 24px;
+  }
+}
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .partnership-content {
+      flex-direction: column;
+  }
+}
+
+footer {
+  font-family: Arial, sans-serif;
+}
+
+.footer-contact a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer-contact a:hover{
+  text-decoration: underline;
+}
+
+.footer-links a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0px 10px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #FF7F50; /* Hover effect */
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: #FFF;
+  background-color: #333;
+}
+
+.footer-social .fb:hover { background-color: #3b5998; }
+.footer-social .tw:hover { background-color: #00aced; }
+.footer-social .ig:hover { background-color: #e4405f; }
+.footer-social .li:hover { background-color: #0077b5; }
+
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.scroll-top {
+  display: block;
+  background-color: #FF7F50;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.whatsapp-icon {
+  display: block;
+  background-color: #25D366;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+
+
+/* Responsive Design......................................................................................................................*/
+@media (max-width: 768px) {
+  .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-input,
+  .dropdown,
+  .price-input {
+      font-size: 14px; /* Smaller font size on mobile */
+      padding: 8px;
+  }
+
+  .search-button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+
+}
+
+/* Responsive styles for devices between 0 and 600px ................................................................................................................ */
+
+@media only screen and (max-width: 600px) {
+
+  /* General adjustments */
+  body {
+    font-size: 10px; /* Reduce base font size for readability */
+  }
+
+  /* Header adjustments */
+  header {
+    flex-direction: row;
+    align-items: baseline; 
+  }
+
+
+  nav a {
+    font-size: 8px;  /* Adjust font size for mobile */
+    display: flex;
+  }
+
+  .logo h1 {
+    font-size: 15px; /* Adjust logo font size */
+    margin-top: 5px;
+  }
+
+  /* Search section adjustments */
+  .search-section {
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    height: 160px;
+    margin-top: -17px;
+  }
+  .search-section img{
+    font-size: 20px;
+    width: 40px;
+    margin-left: 0px;
+  }
+
+  .search-container {
+    flex-direction: row;  /* Stack search inputs vertically */
+    gap: 2px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    
+  }
+
+  .search-input,
+  .dropdown,
+  .price-input,
+  .search-button{
+    width: 100%;/* Full-width inputs for mobile */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    margin-left: -50px;
+  }
+
+  .search-button {
+    font-size: 14px; /* Adjust button font size */
+    /* padding: 10px; */
+  }
+
+  /* Side menu adjustments */
+  .side-menu {
+    width: 100%; /* Take full screen width when open */
+    padding-top: 20px;
+  }
+
+  .close-btn {
+    right: 10px; /* Adjust for mobile screen */
+    font-size: 25px; /* Increase size for touch targets */
+  }
+
+  /* Featured Properties adjustments */
+  .featured-properties {
+    margin-top: 8rem; /* Adjust for smaller screen */
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr; /* Single column layout for properties */
+    gap: 15px;
+  }
+
+  .property-card {
+    margin-bottom: 20px;
+  }
+
+  .featured-properties h2 {
+    margin-top: 6rem;
+    font-size: 1.5rem;
+  }
+
+  /* Blue Section adjustments */
+  .blue-section {
+    padding: 20px 10px; /* Reduce padding */
+  }
+
+  .content-wrapper {
+    flex-direction: column;  /* Stack boxes vertically */
+    align-items: center;
+  }
+
+  .info-box {
+    max-width: 100%; /* Ensure it takes full width */
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    width: 100px;  /* Adjust icon size for smaller screens */
+    height: 100px;
+  }
+
+  /* Partners Section */
+  .partners img {
+    max-width: 120px; /* Adjust partner logo size */
+  }
+
+  /* Footer adjustments */
+  footer {
+    text-align: center; /* Center-align all footer content */
+  }
+
+  .footer-links a {
+    display: block; /* Make links stack vertically */
+    margin: 5px 0;  /* Add vertical spacing */
+  }
+
+  /* Floating buttons adjustments */
+  .floating-buttons {
+    right: 10px; /* Bring buttons closer to the screen edge */
+    bottom: 10px;
+  }
+
+  .scroll-top, .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Open Menu Button adjustments */
+  .open-menu-btn {
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .service-terms-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 11rem;
+    border-radius: 8px;
+  }
+  
+  /* Title & Underline Styling */
+  .service-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .service-title h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .service-underline {
+    width: 70px;
+    height: 3px;
+    background-color: #ff6600; /* Orange color */
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Terms List Styling */
+  .terms-list {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .terms-list ol {
+    list-style-type: none;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .terms-list ol li {
+    margin: 10px 0;
+  }
+  .terms-list ol li:hover {
+    text-decoration: underline;
+  }
+  
+
+}
+
+@media(min-width:601px) and (max-width: 900px){
+  .search-button {
+    background-color: white;
+    color: black;
+    padding: 12px 38px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .menu-icon{
+    width: 60px;
+    margin-left: 29rem;
+  }
+  .blue-section {
+    background-color: #003366; /* Deep Blue */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .info-box {
+    max-width: 100%; /* Ensure it takes full width */
+    margin-bottom: 20px;
+  }
+  .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+  }
+  
+}

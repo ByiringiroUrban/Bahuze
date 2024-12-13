@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Properties</title>
+  <link rel="stylesheet" href="requestPropertie.css">
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body>
+   <!-- Header Section -->
+   <header>
+    <div class="logo">
+        <h1>Bahuze</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="requestPropertie.html">Request Property</a></li>
+            <li><a href="offerPropertie.html">| Offer Property</a></li>
+            <li><a href="login.html">| 🔑Login</a></li>
+            <li><a href="register.html">| 🔐Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Search Section -->
+<section class="search-section">
+    <a href="index.html"><img src="/images/logo.png" alt="logo"></a>
+    <div class="search-container">
+        <input type="text" placeholder="Enter neighborhood..." class="search-input">
+        <select class="dropdown">
+            <option>-- Property type --</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Land</option>
+            <option>Hotel</option>
+            <option>Resort</option>
+            <option>Guest house</option>
+            <option>Lodge</option>
+            <option>Commercial</option>
+            <option>Shared house</option>
+        </select>
+        <select class="dropdown" id="dropdown2">
+            <option>Sale</option>
+            <option>Rent</option>
+        </select>
+        <select class="dropdown">
+            <option>Rwf</option>
+            <option>USD</option>
+            <option>Euro</option>
+        </select>
+        <input type="number" placeholder="Min: 0" class="price-input">
+        <input type="number" placeholder="Max: 500000" class="price-input">
+        <button class="search-button">Search</button>
+        <img  class="menu-icon" id="menu" onclick="openMenu()" src="images/menu.png" alt="menu button">
+    </div>
+
+    <!-- Side Menu Structure (Unchanged) -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="customerService.html">Customer Services</a>
+        <a href="serviceTeam.html">Services Terms</a>
+        <a href="partner.html">Partnership with Other Agents</a>
+        <a href="testimon.html">Customer Testimony</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</section>
+
+
+<div class="form-container">
+    <form id="propertyRequestForm">
+      <div class="form-group">
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+250" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="whoYouAre">Who you are</label>
+        <select id="whoYouAre" name="whoYouAre" required>
+          <option value="">-- Choose your wishes --</option>
+          <option value="own">I am searching the property for my own</option>
+          <option value="relative">I am searching Property for my Relative</option>
+          <option value="institution">I am searching the property for our institution</option>
+          <option value="friend">I am searching the Property for my friend</option>
+          <option value="agent">I am the agent/Broker of the property seeker</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="priceRange">Price Range</label>
+        <div class="price-range-dropdown">
+          <button type="button" id="priceRangeToggle">Select Price Range</button>
+          <div class="dropdown-content">
+            <label for="currency">Currency</label>
+            <select id="currency">
+              <option value="rwf">RWF</option>
+              <option value="usd">USD</option>
+            </select>
+            <br>
+            <label for="minPrice">Min</label>
+            <input type="number" id="minPrice" placeholder="Minimum Amount">
+            <label for="maxPrice">Max</label>
+            <input type="number" id="maxPrice" placeholder="Maximum Amount">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="propertyType">Property type</label>
+        <select id="propertyType" name="propertyType">
+          <option value="">-- Select property type --</option>
+          <option value="apartment">Apartment</option>
+          <option value="house">House</option>
+          <option value="office">Office</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="propertyLocations">Property Locations</label>
+        <input type="text" id="propertyLocations" placeholder="List where do you prefer to live">
+      </div>
+      <div class="form-group full">
+        <label for="details">Describe in details the property you are looking for</label>
+        <textarea id="details" rows="5" placeholder="Message"></textarea>
+      </div>
+      <div class="form-group full">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+  
+
+
+
+<!-- HTML for the Footer -->
+<footer style="background-color: #222; color: #FFF; padding: 30px 0;">
+  <div class="footer-container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <!-- Navigation Links -->
+      <div class="footer-links" style="margin-bottom: 20px;">
+          <a href="index.html">HOME</a> |
+          <a href="about.html">ABOUT US</a> |
+          <a href="customerService.html">CUSTOMER SERVICES</a> |
+          <a href="serviceTeam.html">SERVICES TERMS</a> |
+          <a href="partner.html">PARTNERSHIP WITH OTHER AGENTS</a> |
+          <a href="testimon.html">CUSTOMER TESTIMONY</a> |
+          <a href="contact.html">CONTACT US</a> |
+          <a href="#sitemap">SITEMAP</a>
+      </div>
+
+      <!-- Separator Line -->
+      <hr style="border-color: #444; width: 80%; margin: 10px auto;">
+
+      <!-- Copyright and Developer Information -->
+      <div class="footer-info" style="margin-bottom: 20px;">
+          <p>&copy; 2024 BAHUZE. All Rights Reserved.</p>
+          <p>Developed with <span style="color: #FF7F50;">&#9829;</span> <a href="https://github.com/ByiringiroUrban" style="text-decoration: none; color: #FF7F50;">by Urban Pac</a></p>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="footer-contact" style="margin-bottom: 20px;">
+          <p>&#x1F4CD; Kigali city center - Kacyiru<br>
+             Near the Kigali Public Library, Office No 9<br>
+             <a href="https://wa.me/250788854243">&#x260E; +250 788 854 243<br></a>
+             <a href="">&#x2709; info@bahuze.com</p></a>
+      </div>
+
+      <!-- Social Media Icons -->
+     <!-- Social Media Icons using FontAwesome -->
+
+<div class="footer-social" style="margin-bottom: 20px;">
+  <p>Follow us:</p>
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/your-page-name" class="social-icon fb" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+  </a>
+  
+  <!-- Twitter -->
+  <a href="https://twitter.com/your-username" class="social-icon tw" target="_blank">
+      <i class="fab fa-twitter"></i>
+  </a>
+  
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/your-username" class="social-icon ig" target="_blank">
+      <i class="fab fa-instagram"></i>
+  </a>
+  
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/company/your-company-name" class="social-icon li" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
+  </div>
+
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+      <a href="#" class="scroll-top">&#x25B2;</a>
+      <a href="https://wa.me/250788854243" target="_blank" class="whatsapp-icon">&#x1F4AC;</a>
+  </div>
+</footer>
+<script src="requestPropertie.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partnership with other agent</title>
+  <link rel="stylesheet" href="partner.css">
+  <link rel="icon" href="/images/logo.png">
+
+</head>
+<body>
+      <!-- Header Section -->
+      <header>
+        <div class="logo">
+            <h1>Bahuze</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="requestPropertie.html">Request Property</a></li>
+                <li><a href="offerPropertie.html">| Offer Property</a></li>
+                <li><a href="login.html">| 🔑Login</a></li>
+                <li><a href="register.html">| 🔐Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <a href="index.html"><img src="/images/logo.png" alt="logo"></a>
+        <div class="search-container">
+            <input type="text" placeholder="Enter neighborhood..." class="search-input">
+            <select class="dropdown">
+                <option>-- Property type --</option>
+                <option>House</option>
+                <option>Apartment</option>
+                <option>Land</option>
+                <option>Hotel</option>
+                <option>Resort</option>
+                <option>Guest house</option>
+                <option>Lodge</option>
+                <option>Commercial</option>
+                <option>Shared house</option>
+            </select>
+            <select class="dropdown" id="dropdown2">
+                <option>Sale</option>
+                <option>Rent</option>
+            </select>
+            <select class="dropdown">
+                <option>Rwf</option>
+                <option>USD</option>
+                <option>Euro</option>
+            </select>
+            <input type="number" placeholder="Min: 0" class="price-input">
+            <input type="number" placeholder="Max: 500000" class="price-input">
+            <button class="search-button">Search</button>
+            <img  class="menu-icon" id="menu" onclick="openMenu()" src="images/menu.png" alt="menu button">
+        </div>
+
+        <!-- Side Menu Structure (Unchanged) -->
+        <div id="sideMenu" class="side-menu">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="customerService.html">Customer Services</a>
+            <a href="serviceTeam.html">Services Terms</a>
+            <a href="partner.html">Partnership with Other Agents</a>
+            <a href="testimon.html">Customer Testimony</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </section>
+
+    <section class="partnership-section">
+      <div class="container">
+          <h1 class="partnership-title">Partnership with other agents</h1>
+          <div class="partnership-content">
+              <div class="deal-partnership">
+                  <h2 class="deal-title">Deal Partnership</h2>
+                  <p>We are open to cooperate with local or professional agents/brokers, and we share commission from the deal as agreed.</p>
+                  <p>You can share with us a client or a property.</p>
+              </div>
+              <div class="partnership-form">
+                  <h2 class="form-title">Send Partnership Request</h2>
+                  <form action="#" method="post">
+                      <input type="text" name="name" placeholder="Your Name*" class="input-field" required>
+                      <input type="text" name="phone" placeholder="Your Phone Number*" class="input-field" required>
+                      <input type="email" name="email" placeholder="Your Email*" class="input-field" required>
+                      <input type="text" name="company" placeholder="Company*" class="input-field" required>
+                      <input type="text" name="address" placeholder="Address" class="input-field">
+                      <input type="text" name="areas" placeholder="Areas you cover*" class="input-field" required>
+                      <textarea name="message" placeholder="Message*" class="textarea-field" required></textarea>
+                      <button type="submit" class="submit-btn">Send Request</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+
+     <!-- HTML for the Footer -->
+     <footer style="background-color: #222; color: #FFF; padding: 30px 0;">
+        <div class="footer-container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <!-- Navigation Links -->
+            <div class="footer-links" style="margin-bottom: 20px;">
+                <a href="index.html">HOME</a> |
+                <a href="about.html">ABOUT US</a> |
+                <a href="customerService.html">CUSTOMER SERVICES</a> |
+                <a href="serviceTeam.html">SERVICES TERMS</a> |
+                <a href="partner.html">PARTNERSHIP WITH OTHER AGENTS</a> |
+                <a href="testimon.html">CUSTOMER TESTIMONY</a> |
+                <a href="contact.html">CONTACT US</a> |
+                <a href="#sitemap">SITEMAP</a>
+            </div>
+    
+            <!-- Separator Line -->
+            <hr style="border-color: #444; width: 80%; margin: 10px auto;">
+    
+            <!-- Copyright and Developer Information -->
+            <div class="footer-info" style="margin-bottom: 20px;">
+                <p>&copy; 2024 BAHUZE. All Rights Reserved.</p>
+                <p>Developed with <span style="color: #FF7F50;">&#9829;</span> <a href="https://github.com/ByiringiroUrban" style="text-decoration: none; color: #FF7F50;">by Urban Pac</a></p>
+            </div>
+    
+            <!-- Contact Information -->
+            <div class="footer-contact" style="margin-bottom: 20px;">
+                <p>&#x1F4CD; Kigali city center - Kacyiru<br>
+                   Near the Kigali Public Library, Office No 9<br>
+                   <a href="https://wa.me/250788854243">&#x260E; +250 788 854 243<br></a>
+                   <a href="">&#x2709; info@bahuze.com</p></a>
+            </div>
+    
+            <!-- Social Media Icons -->
+           <!-- Social Media Icons using FontAwesome -->
+    
+    <div class="footer-social" style="margin-bottom: 20px;">
+        <p>Follow us:</p>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/your-page-name" class="social-icon fb" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/your-username" class="social-icon tw" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/your-username" class="social-icon ig" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/your-company-name" class="social-icon li" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+    
+        </div>
+    
+        <!-- Floating Buttons -->
+        <div class="floating-buttons">
+            <a href="#" class="scroll-top">&#x25B2;</a>
+            <a href="https://wa.me/250788854243" target="_blank" class="whatsapp-icon">&#x1F4AC;</a>
+        </div>
+    </footer>
+<script src="partner.js"></script>
+</body>
+</html>
